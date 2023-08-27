@@ -75,6 +75,7 @@ resource "aws_s3_bucket_policy" "alb_logs" {
   })
 }
 
-output "alb_dns_name" {
-  value = aws_lb.lb.dns_name
+output "load_balancer_dns_name" {
+  description = "The DNS name of the load balancer."
+  value       = aws_lb.lb.dns_name
 }
